@@ -37,9 +37,9 @@ const mysql = require('mysql2');
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "160220",
-    database: "clickfit_db",
-    port: 3307 
+    password: "your_password",
+    database: "your_database",
+    port: 3306 
 });
 ```
 ⚠️ **Make sure the MySQL server is running on the correct port.**
@@ -127,10 +127,3 @@ After running this command, click on the **provided local link in the terminal**
 
 ## 📷 **Successful Image Upload Example**
 ![Screenshot](images/screenshot-upload.png)
-
----
-
-## 📬 **Contact**
-##💡 **For any questions or clarifications, feel free to reach out:**
-📧 **Email:** [mehdi.matloub2@gmail.com]
-
