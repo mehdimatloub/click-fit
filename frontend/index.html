@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Fit - Fitness & Sport</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Click Fit</a>
+            <button id="logoutBtn" class="btn btn-danger">Déconnexion</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center text-white">
+        <h1>Bienvenue sur Click Fit</h1>
+        <p>Boostez votre entraînement avec nous !</p>
+    </header>
+
+    <!-- Info Section (AJAX API Numbers) -->
+    <section class="container text-center mt-4">
+        <h2>📅 Info du jour</h2>
+        <p id="random-fact">Chargement...</p>
+    </section>
+
+    <section class="container mt-4">
+        <h2 class="text-center">📤 Uploader une Image</h2>
+        <div id="drop-area">
+            <p>Glissez et déposez une image ici</p>
+            <input type="file" id="fileElem" accept="image/*" style="display: none;">
+            <label for="fileElem" class="btn btn-secondary">Choisir un fichier</label>
+            <span id="fileLabel">Aucun fichier choisi</span> 
+        </div>
+        <button id="uploadBtn" class="btn btn-primary mt-2" disabled>Envoyer</button>
+    </section>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+</body>
+</html>

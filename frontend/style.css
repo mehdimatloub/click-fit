@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/fitness-banner.jpg') no-repeat center center/cover;
+    padding: 120px 20px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Améliore la visibilité */
+}
+/* Sous-titre Hero */
+.hero p {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9); /* Améliore le contraste */
+}
+
+
+/* Zone de Drag & Drop */
+#drop-area {
+    width: 100%;
+    padding: 20px;
+    border: 3px dashed #007bff;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #e3f2fd;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+#drop-area:hover {
+    background-color:  #d6ebff;
+    
+}
+
+/* Espacement entre les sections */
+section {
+    margin-top: 40px;
+}
+.uploaded-image-container {
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;      /* Centre verticalement */
+    flex-direction: column;   /* Empile les éléments */
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+#uploadedImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+#resetUpload {
+    display: block;
+    margin: 15px auto; 
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #ffc107;
+    color: black;
+    transition: background-color 0.3s, transform 0.2s;
+}
+#resetUpload:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+    color: black; 
+}
+
+.success-message {
+    text-align: center;
+    font-weight: bold;
+    color: green;
+    margin-bottom: 10px;
+}
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+#drop-area.dragover {
+    background-color: #d6ebff;
+    border: 2px solid #007bff;
+}
+#uploadedImage {
+    border-radius: 12px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: 380px;
+    height: auto;
+    max-width: 100%;
+}
+
+
+#uploadedImage.show {
+    opacity: 1;
+    transform: scale(1);
+}
